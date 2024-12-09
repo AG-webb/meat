@@ -10,9 +10,9 @@
 
 @font-face {
     font-family: 'GraphikArmenian';
-    src: local('GraphikArmenian Semibold'), local('GraphikArmenian-Semibold'),
-    url('./fonts/GraphikArmenian-Semibold.woff2') format('woff2'),
-    url('./fonts/GraphikArmenian-Semibold.woff') format('woff');
+    src: local('GraphikArmenian SemiBold'), local('GraphikArmenian-SemiBold'),
+    url('./fonts/GraphikArmenian-SemiBold.woff2') format('woff2'),
+    url('./fonts/GraphikArmenian-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
