@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'GraphikArmenian';
+    src: local('GraphikArmenian Bold'), local('GraphikArmenian-Bold'),
+    url('./fonts/GraphikArmenian-Bold.woff2') format('woff2'),
+    url('./fonts/GraphikArmenian-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GraphikArmenian';
+    src: local('GraphikArmenian Semibold'), local('GraphikArmenian-Semibold'),
+    url('./fonts/GraphikArmenian-Semibold.woff2') format('woff2'),
+    url('./fonts/GraphikArmenian-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GraphikArmenian';
+    src: local('GraphikArmenian Medium'), local('GraphikArmenian-Medium'),
+    url('./fonts/GraphikArmenian-Medium.woff2') format('woff2'),
+    url('./fonts/GraphikArmenian-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GraphikArmenian';
+    src: local('GraphikArmenian Regular'), local('GraphikArmenian-Regular'),
+    url('./fonts/GraphikArmenian-Regular.woff2') format('woff2'),
+    url('./fonts/GraphikArmenian-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GraphikArmenian';
+    src: local('GraphikArmenian Light'), local('GraphikArmenian-Light'),
+    url('./fonts/GraphikArmenian-Light.woff2') format('woff2'),
+    url('./fonts/GraphikArmenian-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --main-color: #311C15;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "GraphikArmenian";
+    color: var(--main-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 105%;
+    text-align: center;
+    padding: 50px 0;
+    margin-bottom: 50px;
+    border-bottom: 2px solid var(--main-color);
+}
+
+.container {
+    max-width: 1352px;
+    padding: 0 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.prices {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.price {
+    position: relative;
+    display: flex;
+    display: -ms-flexbox;
+    align-items: flex-end;
+    -ms-flex-align: flex-end;
+    justify-content: space-between;
+    -ms-flex-pack: space-between;
+    margin-bottom: 24px;
+}
+
+.price::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-image: url("./img/horizontal.svg");
+    background-repeat: repeat-x;
+    background-size: contain;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+.price__name {
+    position: relative;
+    z-index: 1;
+    font-size: 32px;
+    line-height: 140%;
+    background-color: #fff;
+    padding-right: 8px;
+}
+
+.price__value {
+    position: relative;
+    z-index: 1;
+    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    font-size: 40px;
+    font-weight: 600;
+    display: flex;
+    display: -ms-flexbox;
+    flex-wrap: nowrap;
+    background-color: #fff;
+    padding-left: 8px;
+}
+
+.price__value։։after {
+    content: "֏";
+    display: inline-block;
+}
+
+.footer {
+    text-align: center;
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.footer::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    background-color: var(--main-color);
+    left: 0;
+    right: 0;
+}
+
+.footer__phone {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    background-color: #fff;
+    color: inherit;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 24px;
+    font-weight: 500;
+    border: 2px solid var(--main-color);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+        padding: 24px 0;
+        margin-bottom: 32px;
+    }
+
+    .price__name {
+        font-size: 18px;
+    }
+    
+    .price__value {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .footer {
+        margin-top: 50px;
+        margin-bottom: 32px;
+    }
+
+    .footer__phone {
+        font-size: 18px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .price {
+        flex-direction: column;
+        align-items: flex-start;
+        -ms-flex-align: flex-start;
+        justify-content: flex-start;
+        -ms-flex-pack: flex-start;
+        margin-bottom: 0;
+        padding: 12px 0;
+    }
+
+    .price::after {
+        bottom: -1px;
+    }
+
+    .price:last-child::after {
+        display: none;
+    }
+
+    .price__name {
+        padding-right: 0;
+    }
+
+    .price__value {
+        padding-left: 0;
+    }
+}
